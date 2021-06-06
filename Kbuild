@@ -1,3 +1,5 @@
+#remove useless qcom device tree in moto build
+ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 ifeq ($(CONFIG_ARCH_KALAMA), y)
 dtbo-y += kalama-audio.dtbo \
                  kalama-audio-cdp.dtbo \
@@ -15,6 +17,12 @@ dtbo-y += kalama-audio.dtbo \
                  kalama-sg-audio-hhg.dtbo \
                  kalama-audio-rb5-gen2.dtbo
 endif
+else
+
+dtbo-$(CONFIG_ARCH_KALAMA) += kalama-audio.dtbo
+dtbo-$(CONFIG_RTWO_DTB) += kalama-audio-moto-rtwo-evb1.dtbo
+
+endif  #($(CONFIG_MMI_DEVICE_DTBS),y)
 
 ifeq ($(CONFIG_ARCH_SA8155), y)
 dtbo-y +=  sa8155-audio.dtbo
