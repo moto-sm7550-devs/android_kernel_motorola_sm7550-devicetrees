@@ -9,7 +9,6 @@
 		qcom,sn-irq = <&tlmm 55 0x00>;
 		qcom,sn-ven = <&tlmm 30 0x00>;
 		qcom,sn-firm = <&tlmm 12 0x00>;
-		qcom,sn-clkreq = <&tlmm 31 0x00>;
 		qcom,sn-vdd-1p8-supply = <&L15B>;
 		qcom,sn-vdd-1p8-voltage = <1760000 1800000>;
 		qcom,sn-vdd-1p8-current = <157000>;
