@@ -1,7 +1,7 @@
 /dts-v1/;
 /plugin/;
 
-#include "kalama-nfc-common.dtsi"
+#include "kalama-v2-nfc-common.dtsi"
 / {
 	model = "Qualcomm Technologies, Inc. Kalama QRD";
 	compatible = "qcom,kalama-qrd", "qcom,kalama", "qcom,qrd";
