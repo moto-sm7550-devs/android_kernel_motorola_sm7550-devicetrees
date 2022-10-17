@@ -20,7 +20,9 @@ endif
 
 ifeq ($(CONFIG_ARCH_KHAJE),y)
 dtbo-y += nxp/khaje-nfc-idp.dtbo \
-          nxp/khaje-nfc-qrd.dtbo
+          nxp/khaje-nfc-qrd.dtbo \
+          nxp/khaje-nfc-qrd-hvdcp3p5.dtbo \
+          nxp/khaje-nfc-qrd-nowcd9375.dtbo
 endif
 
 always-y	:= $(dtb-y) $(dtbo-y)
