@@ -2,7 +2,8 @@ ifeq ($(CONFIG_ARCH_KALAMA),y)
 dtbo-y += nxp/kalama-nfc.dtbo \
 	  nxp/kalama-nfc-mtp.dtbo \
 	  nxp/kalama-nfc-qrd.dtbo \
-	  nxp/kalama-nfc-cdp.dtbo
+	  nxp/kalama-nfc-cdp.dtbo \
+	  nxp/kalama-nfc-rcm.dtbo
 
 dtbo-y += nxp/kalama-v2-nfc.dtbo \
 	  nxp/kalama-v2-nfc-mtp.dtbo \
