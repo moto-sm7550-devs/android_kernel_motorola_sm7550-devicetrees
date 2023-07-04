@@ -6,7 +6,7 @@
 		status = "ok";
 		compatible = "st,st54spi_gpio";
 		/* gpio used as SE_nRESET */
-		gpio-power_nreset = <&tlmm 12 0x00>;
+		gpio-power_nreset = <&tlmm 68 0x00>;
 	};
 };
 
