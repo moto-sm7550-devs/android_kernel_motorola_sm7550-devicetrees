@@ -29,6 +29,7 @@ endif
 ifeq ($(CONFIG_ARCH_CROWXYZ),y)
 dtbo-y += st/crow-nfc.dtbo \
 	  st/crow-nfc-atp.dtbo \
+          st/crow-nfc-idp-wcd9395-wcd-dmic.dtbo \
 	  st/crow-nfc-idp.dtbo
 endif
 
@@ -37,7 +38,8 @@ dtbo-y += nxp/crow-nfc.dtbo \
           nxp/crow-nfc-atp.dtbo \
           nxp/crow-nfc-idp.dtbo \
           nxp/crow-nfc-idp-wcd9395-wcd-dmic.dtbo \
-          nxp/crow-nfc-qrd.dtbo
+          nxp/crow-nfc-qrd.dtbo \
+          nxp/crow-nfc-rcm.dtbo
 endif
 
 always-y	:= $(dtb-y) $(dtbo-y)
