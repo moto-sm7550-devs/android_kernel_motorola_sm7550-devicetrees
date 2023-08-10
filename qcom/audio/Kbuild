@@ -1,3 +1,5 @@
+DTC_INCLUDE += $(srctree)/../sm7550-modules/qcom/opensource/audio-kernel/include
+
 #remove useless qcom device tree in moto build
 ifneq ($(CONFIG_MMI_DEVICE_DTBS),y)
 ifeq ($(CONFIG_ARCH_KALAMA), y)
