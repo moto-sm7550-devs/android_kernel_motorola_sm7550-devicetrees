@@ -14,6 +14,8 @@ dtbo-$(CONFIG_RTWO_DTB) += kalama-ese-rtwo-evb1.dtbo
 
 dtbo-$(CONFIG_CTWO_DTB) += kalama-ese-ctwo-evb.dtbo
 
+dtbo-$(CONFIG_ARC_DTB) += kalama-ese-arc-evb.dtbo
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo
