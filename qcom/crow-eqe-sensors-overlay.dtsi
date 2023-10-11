@@ -58,7 +58,7 @@
 		Semtech,ref-phases-a = <4>;
 		Semtech,ref-phases-b = <5>;
 		Semtech,ref-phases-c = <6>;
-		Semtech,button-flag = <0x1f>;
+		Semtech,button-flag = <0x0f>;
 		Semtech,reg-num = <63>;
 		Semtech,reg-init = <
 			0x4004 0x74
@@ -138,7 +138,7 @@
 		interrupt-names = "awinic_irq";
 		irq-gpio = <&tlmm 127 0x02>;
 		//vcc0-supply = <&L12A>;
-		channel_use_flag = <0x1f>;
+		channel_use_flag = <0x0f>;
 		aw_sar,use_plug_cail;
 		aw_sar,update_fw;
 		/* private node belongs to aw963xx */
