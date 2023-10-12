@@ -121,6 +121,18 @@
 &pm7550ba_vib {
         status = "disabled";
 };
+&pm7550ba_eusb2_repeater {
+	qcom,param-override-seq =
+		/* <value reg_offset> */
+		/* Adjust HS trasmit amplitude */
+		/* USB2 crossover */
+		<0xB 0x50
+		/* IUSB2 */
+		 0xB 0x51
+		/* EQU */
+		 0x1 0x56
+		>;
+};
 
 &soc {
         qcom,pmic_glink_log {
