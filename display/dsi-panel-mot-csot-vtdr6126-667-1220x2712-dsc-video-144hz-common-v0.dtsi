@@ -55,7 +55,7 @@
 
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
-				39 00 00 40 00 00 05 63 10 00 14 AC
+				39 00 00 40 00 00 05 63 10 00 1A 3C
 				39 01 00 00 00 00 02 62 03];
 
 		qcom,mdss-dsi-panel-lhbm-wait-fps-valid;
@@ -64,7 +64,7 @@
 		qcom,mdss-dsi-panel-lhbm-not-allowed-fps-list = <60 90 144>;
 
 		qcom,mdss-dsi-panel-local-hbm-enabled;
-		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <5291>;
+		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <6715>;
 		qcom,mdss-dsi-panel-local-hbm-alpha-register = <0x63>;
 		qcom,mdss-dsi-panel-local-hbm-alpha-size = <16001>;
 		qcom,mdss-dsi-panel-bl-num = <1>;
@@ -75,9 +75,9 @@
 				qcom,mdss-dsi-panel-framerate = <144>;
 				qcom,mdss-dsi-panel-width = <1220>;
 				qcom,mdss-dsi-panel-height = <2712>;
-				qcom,mdss-dsi-h-front-porch = <24>;
+				qcom,mdss-dsi-h-front-porch = <20>;
 				qcom,mdss-dsi-h-back-porch = <20>;
-				qcom,mdss-dsi-h-pulse-width = <4>;
+				qcom,mdss-dsi-h-pulse-width = <2>;
 				qcom,mdss-dsi-h-sync-skew = <0>;
 				qcom,mdss-dsi-h-sync-pulse = <0>;
 				qcom,mdss-dsi-v-back-porch = <18>;
@@ -90,6 +90,8 @@
 				qcom,mdss-dsi-on-command = [
 					39 00 00 00 00 00 03 F0 AA 10
 					39 00 00 00 00 00 18 D0 C4 04 60 14 17 00 35 4B 1A 4F 00 00 4B 30 50 00 00 00 04 44 1A 1A 1A
+					39 00 00 00 00 00 03 F0 AA 13
+					39 00 00 00 00 00 19 C5 02 9B 02 62 03 15 02 9B 02 62 03 15 02 9C 02 64 03 17 02 9E 02 65 03 18
 					39 00 00 00 00 00 02 03 01
 					39 00 00 00 00 00 02 35 00
 					39 00 00 00 00 00 02 53 20
