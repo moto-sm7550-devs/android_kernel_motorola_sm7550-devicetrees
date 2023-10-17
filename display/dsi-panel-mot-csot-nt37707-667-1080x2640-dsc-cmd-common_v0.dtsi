@@ -1019,7 +1019,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-novateck-ic;
 	};
 
-	/*timing@7{
+	timing@7{
 		qcom,mdss-dsi-cmd-mode;
 		qcom,mdss-dsi-panel-framerate = <165>;
 		qcom,mdss-dsi-panel-width = <1080>;
@@ -1142,7 +1142,7 @@ qcom,mdss-dsi-display-timings {
 		qcom,mdss-dsc-bit-per-pixel = <8>;
 		qcom,mdss-dsc-block-prediction-enable;
 		qcom,mdss-dsc-novateck-ic;
-	};*/
+	};
 };
 
 };
