@@ -28,4 +28,5 @@ dtbo-$(CONFIG_ARCH_CROW) += crow-camera.dtbo
 
 #Moto camera sensor dtbo
 dtbo-$(CONFIG_EQE_DTB) += crow-camera-sensor-eqe-evb.dtbo \
-				crow-camera-sensor-eqe-evt.dtbo
+				crow-camera-sensor-eqe-evt.dtbo \
+				crow-camera-sensor-eqe-dvt1.dtbo
