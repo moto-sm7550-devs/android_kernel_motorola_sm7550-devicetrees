@@ -36,3 +36,5 @@
 &reserved_memory {
 	/delete-node/ ramoops_region;
 };
+
+/delete-node/ &mem_offline;
