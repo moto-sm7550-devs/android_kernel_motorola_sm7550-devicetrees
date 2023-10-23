@@ -120,3 +120,52 @@
 		st,xtalkval = <0x0 0x0 0x0>;
 	};
 };
+
+&pm8010_m {
+	status  = "disabled";
+};
+
+&pm8010_n {
+	status  = "disabled";
+};
+
+/* Set SID from 0xa to 0x5 for pmr735d */
+&spmi0_debug_bus {
+	qcom,pm8010-debug@c {
+		status  = "disabled";
+	};
+	qcom,pm8010-debug@d {
+		status  = "disabled";
+	};
+
+	qcom,pmr735d-debug@5 {
+		compatible = "qcom,spmi-pmic";
+		reg = <0x5 SPMI_USID>;
+		#address-cells = <2>;
+		#size-cells = <0>;
+		qcom,can-sleep;
+	};
+
+	qcom,pmr735d-debug@4 {
+		status  = "disabled";
+	};
+
+	qcom,pmr735a-debug@5 {
+		status  = "disabled";
+	};
+};
+
+&pmr735d_k {
+	reg = <0x5 SPMI_USID>;
+};
+&pmr735d_k_tz {
+	interrupts = <0x5 0xa 0x0 IRQ_TYPE_EDGE_BOTH>;
+};
+
+&pmr735a {
+	status  = "disabled";
+};
+
+&pmr735a_temp_alarm {
+	status  = "disabled";
+};
