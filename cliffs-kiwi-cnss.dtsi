@@ -83,6 +83,21 @@
 		/* For AOP communication, use direct QMP instead of mailbox */
 		qcom,qmp = <&aoss_qmp>;
 
+		vdd-wlan-io-supply = <&L7B>;
+		qcom,vdd-wlan-io-config = <1800000 1800000 0 0 1>;
+		vdd-wlan-io12-supply = <&L5B>;
+		qcom,vdd-wlan-io12-config = <1200000 1200000 0 0 1>;
+		vdd-wlan-supply = <&S3E>;
+		qcom,vdd-wlan-config = <940000 1003000 0 0 1>;
+		vdd-wlan-dig-supply = <&S3B>;
+		qcom,vdd-wlan-dig-config = <968000 1040000 0 0 1>;
+		vdd-wlan-rfa1-supply = <&S1B>;
+		qcom,vdd-wlan-rfa1-config = <1856000 2040000 0 0 1>;
+		vdd-wlan-rfa2-supply = <&S2B>;
+		qcom,vdd-wlan-rfa2-config = <1256000 1408000 0 0 1>;
+		vdd-wlan-ant-share-supply = <&L4E>;
+		qcom,vdd-wlan-ant-share-config = <1800000 2000000 0 0 1>;
+
 		interconnects =
 		<&pcie_anoc MASTER_PCIE_0 &pcie_anoc SLAVE_ANOC_PCIE_GEM_NOC>,
 		<&gem_noc MASTER_ANOC_PCIE_GEM_NOC &mc_virt SLAVE_EBI1>;
@@ -128,6 +143,36 @@
 		<587500 12800000>,
 		/* low (latency critical): 18-60 Mbps ddr: 547.2 MHz */
 		<7500 2188800>;
+
+		qcom,vreg_pdc_map =
+			"s3e", "rf",
+			"s3b", "rf",
+			"s1b", "rf",
+			"s2b", "rf";
+
+		qcom,pmu_vreg_map =
+			"VDD095_PMU", "s3e",
+			"VDD_PMU_AON_I", "s3b",
+			"VDD095_PMU_BT", "s3b",
+			"VDD09_PMU_RFA_I", "s3b",
+			"VDD13_PMU_PCIE_I", "s2b",
+			"VDD13_PMU_RFA_I", "s2b",
+			"VDD19_PMU_PCIE_I", "s1b",
+			"VDD19_PMU_RFA_I", "s1b";
+
+		qcom,pdc_init_table =
+			"{class: wlan_pdc, ss: rf, res: l5b.m, enable: 1}",
+			"{class: wlan_pdc, ss: rf, res: s3e.e, enable: 0}",
+			"{class: wlan_pdc, ss: rf, res: s3e.m, dwnval: 3}",
+			"{class: wlan_pdc, ss: bb, res: pdc, enable: 1}",
+			"{class: wlan_pdc, ss: rf, res: s3e.m, upval: 3}",
+			"{class: wlan_pdc, ss: rf, res: s3b.v, upval: 976}",
+			"{class: wlan_pdc, ss: rf, res: s1b.v, upval: 1864}",
+			"{class: wlan_pdc, ss: rf, res: s2b.v, upval: 1316}",
+			"{class: wlan_pdc, ss: rf, res: b1b.m, enable: 0}",
+			"{class: wlan_pdc, ss: rf, res: l18b.m, enable: 0}",
+			"{class: wlan_pdc, ss: rf, res: awlan.v, enable: 0}";
+
 	};
 };
 
