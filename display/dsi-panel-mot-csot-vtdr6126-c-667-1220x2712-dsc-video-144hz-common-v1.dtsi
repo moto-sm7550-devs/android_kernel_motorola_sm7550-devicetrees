@@ -10,7 +10,7 @@
  * GNU General Public License for more details.
  */
 &mdss_mdp {
-	mot_csot_vtdr6126_c_667_1220p_dsc_vid_144hz: qcom,mdss_dsi_mot_csot_vtdr6126_c_667_1220p_dsc_vid {
+	mot_csot_vtdr6126_c_667_1220p_dsc_vid_144hz_v1: qcom,mdss_dsi_mot_csot_vtdr6126_c_667_1220p_dsc_vid_v1 {
 		qcom,mdss-dsi-panel-name = "mipi_mot_vid_csot_1220p_dsc_667";
 		qcom,mdss-dsi-panel-supplier = "csot";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
@@ -56,7 +56,7 @@
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
 				39 00 00 40 00 00 05 63 10 00 14 AC
-				39 01 00 00 00 00 02 62 03];
+				39 00 00 00 00 00 02 62 03];
 
 		qcom,mdss-dsi-panel-local-hbm-enabled;
 		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <6715>;
@@ -84,10 +84,8 @@
 				qcom,mdss-dsi-v-bottom-border = <0>;
 				qcom,mdss-dsi-on-command = [
 					39 00 00 00 00 00 03 F0 AA 10
-					39 00 00 00 00 00 18 D0 C4 04 60 14 7A 00 35 4B 19 4F 00 00 4B 30 50 00 00 00 04 44 19 19 19
+					39 00 00 00 00 00 18 D0 84 04 60 14 17 00 35 4B 19 4F 00 00 4B 32 4F 00 00 00 04 44 19 19 19
 					39 00 00 00 00 00 03 BB 01 41
-					39 00 00 00 00 00 03 F0 AA 13
-					39 00 00 00 00 00 19 C5 02 8F 02 5D 03 04 02 90 02 5D 03 04 02 91 02 5E 03 04 02 91 02 5E 03 06
 					39 00 00 00 00 00 02 03 01
 					39 00 00 00 00 00 02 35 00
 					39 00 00 00 00 00 02 53 20
