@@ -8,6 +8,10 @@
         };
 };
 
+&socd_trip {
+    temperature = <95>;
+};
+
 &pmk8550_vadc {
 	pm7550_pa2_therm {
 		reg = <PMXR2230_ADC5_GEN3_AMUX_THM5_100K_PU>;
