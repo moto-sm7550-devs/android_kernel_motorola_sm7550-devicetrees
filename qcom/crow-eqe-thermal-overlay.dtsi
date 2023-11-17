@@ -9,7 +9,7 @@
 };
 
 &socd_trip {
-    temperature = <95>;
+    temperature = <98>;
 };
 
 &pmk8550_vadc {
@@ -355,4 +355,41 @@
 		};
 	};
 
+	socd {
+		cooling-maps {
+			socd_apc1 {
+				trip = <&socd_trip>;
+				cooling-device = <&APC1_pause 0 0>;
+			};
+			socd_cpu4 {
+				trip = <&socd_trip>;
+				cooling-device = <&CPU4 THERMAL_NO_LIMIT 4>;
+			};
+			socd_cpu7 {
+				trip = <&socd_trip>;
+				cooling-device = <&cpu7_pause 1 1>;
+			};
+
+		};
+	};
+
+	nspss-0 {
+		polling-delay-passive = <1000>;
+	};
+
+	nspss-1 {
+		polling-delay-passive = <1000>;
+	};
+
+	nspss-2 {
+		polling-delay-passive = <1000>;
+	};
+
+	gpuss-0 {
+		polling-delay-passive = <1000>;
+	};
+
+	gpuss-1 {
+		polling-delay-passive = <1000>;
+	};
 };
