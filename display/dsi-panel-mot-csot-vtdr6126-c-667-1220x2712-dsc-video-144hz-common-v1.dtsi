@@ -50,13 +50,15 @@
 		qcom,mdss-dsi-hbm-on-command = [
 				39 00 00 40 00 00 03 51 3E 80
 				39 00 00 00 00 00 02 62 00];
+		qcom,mdss-dsi-hbm-on-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-hbm-off-command = [
 				39 00 00 00 00 00 02 62 00];
-
+		qcom,mdss-dsi-hbm-off-command-state = "dsi_hs_mode";
 		qcom,mdss-dsi-hbm-fod;
 		qcom,mdss-dsi-hbm-fod-on-command = [
 				39 00 00 40 00 00 05 63 10 00 14 AC
 				39 00 00 00 00 00 02 62 03];
+		qcom,mdss-dsi-hbm-fod-on-command-state = "dsi_hs_mode";
 
 		qcom,mdss-dsi-panel-local-hbm-enabled;
 		qcom,mdss-dsi-panel-local-hbm-DC-HYBIRD-THRESHOLD-BL = <6715>;
@@ -86,6 +88,7 @@
 					39 00 00 00 00 00 03 F0 AA 10
 					39 00 00 00 00 00 18 D0 84 04 60 14 17 00 35 4B 19 4F 00 00 4B 32 4F 00 00 00 04 44 19 19 19
 					39 00 00 00 00 00 03 BB 01 41
+					39 00 00 00 00 00 03 B9 01 10
 					39 00 00 00 00 00 02 03 01
 					39 00 00 00 00 00 02 35 00
 					39 00 00 00 00 00 02 53 20
@@ -105,6 +108,10 @@
 					39 00 00 00 00 00 03 FF 5A 80
 					39 00 00 00 00 00 02 65 26
 					39 00 00 00 00 00 02 F7 01
+					39 00 00 00 00 00 02 65 0A
+					39 00 00 00 00 00 02 F9 A8
+					39 00 00 00 00 00 03 F0 AA 13
+					39 00 00 00 00 00 10 C2 01 36 E8 36 E8 36 E8 36 E8 20 28 14 AC 05 64
 					39 00 00 00 00 00 03 FF 5A 81
 					39 00 00 00 00 00 02 65 02
 					39 00 00 00 00 00 02 F4 27
