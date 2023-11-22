@@ -22,6 +22,7 @@ endif
 ifeq ($(CONFIG_ARCH_HOLI),y)
 dtbo-y += holi-cnss.dtbo
 dtbo-y += holi-pm6125-cnss.dtbo
+dtbo-y += holi-pm6125-nopmi-cnss.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_CROW),y)
@@ -47,10 +48,6 @@ endif
 ifeq ($(CONFIG_ARCH_PINEAPPLE),y)
 dtbo-y += pineapple-kiwi-cnss.dtbo
 dtbo-y += pineapplep-hdk-kiwi-cnss.dtbo
-endif
-
-ifeq ($(CONFIG_ARCH_SUN),y)
-dtbo-y += sun-peach-cnss.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_CLIFFS),y)
