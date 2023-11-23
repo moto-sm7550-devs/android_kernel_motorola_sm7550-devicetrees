@@ -131,13 +131,13 @@
 		/* common node */
 		compatible = "awinic,aw_sar";
 		reg = < 0x12 >;
-		//aw_sar,regulator-power-supply = <1>;
+		aw_sar,regulator-power-supply = <1>;
 		sar-num = < 0 >;
 		interrupt-parent = < &tlmm >;
 		interrupts = <127 0x02>;
 		interrupt-names = "awinic_irq";
 		irq-gpio = <&tlmm 127 0x02>;
-		//vcc0-supply = <&L12A>;
+		vcc0-supply = <&pm7550_l7>;
 		channel_use_flag = <0x0f>;
 		aw_sar,use_plug_cail;
 		aw_sar,update_fw;
