@@ -132,7 +132,7 @@
 
 	camera_mem: camera_region@9e600000 {
 		no-map;
-		reg = <0x0 0x9e600000 0x0 0x700000>;
+		reg = <0x0 0x9e600000 0x0 0x800000>;
 	};
 
 	video_mem: video_region@9f000000 {
