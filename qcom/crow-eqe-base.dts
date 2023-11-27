@@ -13,3 +13,11 @@
 /dts-v1/;
 
 #include "crow-moto-common-base.dtsi"
+
+&aliases {
+	i2c0 = &qupv3_se1_i2c;
+	i2c1 = &qupv3_se8_i2c;
+	i2c2 = &qupv3_se13_i2c;
+	i2c3 = &qupv3_se15_i2c;
+};
+
