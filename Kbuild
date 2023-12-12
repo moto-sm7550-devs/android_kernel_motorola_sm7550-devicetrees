@@ -1,3 +1,7 @@
+ifeq ($(CONFIG_ARCH_MONACO_AUTO),y)
+dtbo-y += monaco_auto-cnss.dtbo
+endif
+
 ifeq ($(CONFIG_ARCH_WAIPIO),y)
 dtbo-y += waipio-cnss.dtbo
 dtbo-y += waipio-kiwi-cnss.dtbo
@@ -48,6 +52,11 @@ endif
 ifeq ($(CONFIG_ARCH_PINEAPPLE),y)
 dtbo-y += pineapple-kiwi-cnss.dtbo
 dtbo-y += pineapplep-hdk-kiwi-cnss.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_SUN),y)
+dtbo-y += sun-peach-cnss.dtbo
+dtbo-y += sun-peach-cnss-v8.dtbo
 endif
 
 ifeq ($(CONFIG_ARCH_CLIFFS),y)
