@@ -121,6 +121,12 @@
 	regulator-always-on;
 };
 
+&L3D {
+	regulator-min-microvolt = <1250000>;
+	regulator-max-microvolt = <1250000>;
+	qcom,init-voltage = <1250000>;
+};
+
 &tlmm {
     laser_xsdn_active: laser_xsdn_active {
 		mux {
