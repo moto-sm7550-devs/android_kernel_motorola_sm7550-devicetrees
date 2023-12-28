@@ -144,6 +144,18 @@
 		/*PREEM*/
 		 0x7 0x57
 		>;
+	qcom,host-param-override-seq =
+		/* <value reg_offset> */
+		/* Adjust HS trasmit amplitude */
+		/* USB2 crossover */
+		<0xB 0x50
+		/* IUSB2 */
+		 0xB 0x51
+		/* EQU */
+		 0x1 0x56
+		/*PREEM*/
+		 0x7 0x57
+		>;
 };
 
 &soc {
