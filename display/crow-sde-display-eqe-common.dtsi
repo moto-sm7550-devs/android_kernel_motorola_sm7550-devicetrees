@@ -122,7 +122,7 @@
        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
        qcom,mdss-dsi-bl-min-level = <420>;//
        qcom,mdss-dsi-bl-max-level = <16128>;
-       qcom,mdss-dsi-bl-default-level = <10230>;
+       qcom,mdss-dsi-bl-default-level = <8064>;
        qcom,mdss-brightness-max-level = <16128>;
        qcom,platform-reset-gpio = <&tlmm 29 0>;
        qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -173,7 +173,7 @@
        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
        qcom,mdss-dsi-bl-min-level = <420>;//
        qcom,mdss-dsi-bl-max-level = <16128>;
-       qcom,mdss-dsi-bl-default-level = <10230>;
+       qcom,mdss-dsi-bl-default-level = <8064>;
        qcom,mdss-brightness-max-level = <16128>;
        qcom,platform-reset-gpio = <&tlmm 29 0>;
        qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -224,7 +224,7 @@
        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
        qcom,mdss-dsi-bl-min-level = <420>;//
        qcom,mdss-dsi-bl-max-level = <16128>;
-       qcom,mdss-dsi-bl-default-level = <10230>;
+       qcom,mdss-dsi-bl-default-level = <8064>;
        qcom,mdss-brightness-max-level = <16128>;
        qcom,platform-reset-gpio = <&tlmm 29 0>;
        qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -275,7 +275,7 @@
        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
        qcom,mdss-dsi-bl-min-level = <420>;//
        qcom,mdss-dsi-bl-max-level = <16128>;
-       qcom,mdss-dsi-bl-default-level = <10230>;
+       qcom,mdss-dsi-bl-default-level = <8064>;
        qcom,mdss-brightness-max-level = <16128>;
        qcom,platform-reset-gpio = <&tlmm 29 0>;
        qcom,bl-dsc-cmd-state = "dsi_hs_mode";
@@ -326,7 +326,7 @@
        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
        qcom,mdss-dsi-bl-min-level = <420>;//
        qcom,mdss-dsi-bl-max-level = <16128>;
-       qcom,mdss-dsi-bl-default-level = <10230>;
+       qcom,mdss-dsi-bl-default-level = <8064>;
        qcom,mdss-brightness-max-level = <16128>;
        qcom,platform-reset-gpio = <&tlmm 29 0>;
        qcom,bl-dsc-cmd-state = "dsi_hs_mode";
