@@ -114,7 +114,9 @@ CROW_BASE_DTB += crow-eqe-base.dtb
 CROW_BOARDS += crow-eqe-evb1-overlay.dtbo \
                crow-eqe-evt1-overlay.dtbo \
                crow-eqe-dvt1-overlay.dtbo \
-               crow-eqe-evt1-jp-overlay.dtbo
+               crow-eqe-evb1-jp-overlay.dtbo \
+               crow-eqe-evt1-jp-overlay.dtbo \
+               crow-eqe-dvt1-jp-overlay.dtbo
 endif
 
 else
