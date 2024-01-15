@@ -26,5 +26,6 @@
 
 &qti_glink_charger {
 	mmi,usb-mosfet-supported;
-	/* mmi,mos-en-gpio = <&pm8550vs_d_gpios 4 0>; */
+	mmi,support-gpio-hwrev = <0xC000>;
+	mmi,mos-en-gpio = <&pm8550vs_d_gpios 4 0>;
 };
