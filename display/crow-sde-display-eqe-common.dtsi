@@ -54,6 +54,43 @@
 
 	};
 
+	dsi_panel_pwr_supply_eqe_nova: dsi_panel_pwr_supply_eqe_nova {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vddio";
+			qcom,supply-min-voltage = <1800000>;
+			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-enable-load = <200000>;
+			qcom,supply-disable-load = <80>;
+			qcom,supply-post-on-sleep = <1>;
+		};
+
+		qcom,panel-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vdd";
+			qcom,supply-min-voltage = <1250000>;
+			qcom,supply-max-voltage = <1250000>;
+			qcom,supply-enable-load = <299000>;
+			qcom,supply-disable-load = <0>;
+			qcom,supply-post-on-sleep = <1>;
+			qcom,supply-post-off-sleep = <1>;
+		};
+
+		qcom,panel-supply-entry@2 {
+			reg = <2>;
+			qcom,supply-name = "vci";
+			qcom,supply-min-voltage = <3000000>;
+			qcom,supply-max-voltage = <3000000>;
+			qcom,supply-enable-load = <10000>;
+			qcom,supply-disable-load = <0>;
+			qcom,supply-post-on-sleep = <0>;
+			qcom,supply-post-off-sleep = <1>;
+		};
+
+	};
 };
 
 
@@ -322,7 +359,7 @@
 
        //qcom,dsi-dyn-clk-enable;
 
-       qcom,panel-supply-entries = <&dsi_panel_pwr_supply_eqe>;
+       qcom,panel-supply-entries = <&dsi_panel_pwr_supply_eqe_nova>;
        qcom,mdss-dsi-no-panel-on-read-support;
        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
        qcom,mdss-dsi-bl-min-level = <420>;//
@@ -373,7 +410,7 @@
 
        //qcom,dsi-dyn-clk-enable;
 
-       qcom,panel-supply-entries = <&dsi_panel_pwr_supply_eqe>;
+       qcom,panel-supply-entries = <&dsi_panel_pwr_supply_eqe_nova>;
        qcom,mdss-dsi-no-panel-on-read-support;
        qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
        qcom,mdss-dsi-bl-min-level = <420>;//
