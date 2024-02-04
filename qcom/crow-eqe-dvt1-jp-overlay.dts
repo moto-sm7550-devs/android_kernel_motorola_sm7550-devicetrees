@@ -29,3 +29,32 @@
 	mmi,support-gpio-hwrev = <0xC000>;
 	mmi,mos-en-gpio = <&pm8550vs_d_gpios 4 0>;
 };
+
+&soc {
+	qcom,userspace-cdev {
+		usb_usr_cdev: usb-usr-cdev {
+			qcom,max-level = <2>;
+			#cooling-cells = <2>;
+		};
+	};
+};
+
+&thermal_zones {
+	conn-therm {
+		polling-delay-passive = <1000>;
+		trips {
+			active_config0: active-config0 {
+				temperature = <75000>;
+				hysteresis = <5000>;
+				type = "passive";
+			};
+		};
+                cooling-maps {
+                       usb_cdev0 {
+                               trip = <&active_config0>;
+                               cooling-device = <&usb_usr_cdev 1 1>;
+                       };
+                };
+
+	};
+};
