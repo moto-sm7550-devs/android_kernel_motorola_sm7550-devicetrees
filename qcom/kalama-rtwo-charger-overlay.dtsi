@@ -5,7 +5,7 @@
 };
 
 &qti_glink_charger {
-	profile-ids-map = "107000", "SB18D58448", "38000", "SB18D58447";
+	profile-ids-map = "107000", "SB18D58448", "38000", "SB18D58447","107000", "SB18E04368", "38000", "SB18EO5257";
 };
 
 &battery_charger {
