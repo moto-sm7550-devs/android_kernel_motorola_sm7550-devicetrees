@@ -1,0 +1,89 @@
+#include "kalama-audio-rb5-gen2-overlay.dtsi"
+&tx_swr_clk_active {
+	config {
+		drive-strength = <2>;
+	};
+};
+
+&tx_swr_data0_active {
+	config {
+		drive-strength = <2>;
+	};
+};
+
+&tx_swr_data1_active {
+	config {
+		drive-strength = <2>;
+	};
+};
+
+&tx_swr_data2_active {
+	config {
+		drive-strength = <2>;
+	};
+};
+
+&kalama_snd {
+	qcom,model = "kalama-rb5-gen2-snd-card";
+
+	qcom,audio-routing =
+		"TX DMIC0", "Digital Mic0",
+		"TX DMIC1", "Digital Mic1",
+		"TX DMIC2", "Digital Mic2",
+		"TX DMIC3", "Digital Mic3",
+		"TX DMIC4", "Digital Mic4",
+		"TX DMIC5", "Digital Mic5",
+		"HAP_IN", "PCM_OUT",
+		"WSA SRC0_INP", "SRC0",
+		"WSA_TX DEC0_INP", "TX DEC0 MUX",
+		"WSA_TX DEC1_INP", "TX DEC1 MUX",
+		"RX_TX DEC0_INP", "TX DEC0 MUX",
+		"RX_TX DEC1_INP", "TX DEC1 MUX",
+		"RX_TX DEC2_INP", "TX DEC2 MUX",
+		"RX_TX DEC3_INP", "TX DEC3 MUX",
+		"VA SWR_INPUT", "VA_SWR_CLK",
+		"VA_AIF1 CAP", "VA_SWR_CLK",
+		"VA_AIF2 CAP", "VA_SWR_CLK",
+		"VA_AIF3 CAP", "VA_SWR_CLK",
+		"VA DMIC0", "Digital Mic0",
+		"VA DMIC1", "Digital Mic1",
+		"VA DMIC2", "Digital Mic2",
+		"VA DMIC3", "Digital Mic3",
+		"VA DMIC4", "Digital Mic4",
+		"VA DMIC5", "Digital Mic5";
+
+		asoc-codec = <&stub_codec>, <&lpass_cdc>,
+				   <&swr_haptics>;
+		asoc-codec-names = "msm-stub-codec.1", "lpass-cdc",
+				   "swr-haptics";
+		qcom,wsa-max-devs = <0>;
+		qcom,wcd-disabled = <1>;
+};
+
+&wcd938x_rx_slave {
+	status = "disabled";
+};
+
+&wcd938x_codec {
+	status = "disabled";
+};
+
+&wcd938x_rst_gpio {
+	status = "disabled";
+};
+
+&wsa884x_0220 {
+	status = "disabled";
+};
+
+&wsa884x_0221 {
+	status = "disabled";
+};
+
+&wsa_spkr_en02 {
+	status = "disabled";
+};
+
+&wsa_spkr_en13 {
+	status = "disabled";
+};
