@@ -1,0 +1,64 @@
+/* Copyright (c) 2023, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+/* This is derivated from Qcom crow-mtp-overlay.dts */
+
+/dts-v1/;
+/plugin/;
+
+#include "crow-eqe-device-common-overlay.dtsi"
+#define EQE_RADIO_JP 3
+/ {
+	model = "eqe";
+	compatible = "qcom,crow-idp", "qcom,crow", "qcom,idp", "qcom,eqe";
+	qcom,msm-id = <608 0x10000>;
+	qcom,board-id = <(EQE_RADIO_JP << 8 | 0x41) 0xB100>;
+};
+
+&qti_glink_charger {
+	mmi,usb-mosfet-supported;
+	mmi,support-gpio-hwrev = <0xC000>;
+	mmi,mos-en-gpio = <&pm8550vs_d_gpios 4 0>;
+};
+
+&soc {
+	qcom,userspace-cdev {
+		usb_usr_cdev: usb-usr-cdev {
+			qcom,max-level = <2>;
+			#cooling-cells = <2>;
+		};
+	};
+};
+
+&thermal_zones {
+	conn-therm {
+		polling-delay-passive = <1000>;
+		trips {
+			active_config0: active-config0 {
+				temperature = <75000>;
+				hysteresis = <5000>;
+				type = "passive";
+			};
+		};
+                cooling-maps {
+                       usb_cdev0 {
+                               trip = <&active_config0>;
+                               cooling-device = <&usb_usr_cdev 1 1>;
+                       };
+                };
+
+	};
+};
+
+&battery_charger {
+	qcom,thermal-mitigation = <22000000 20000000 18000000 16000000 14000000 12000000 10000000 9000000 6000000 5000000 4000000 3000000 2000000 500000 200000>;
+};

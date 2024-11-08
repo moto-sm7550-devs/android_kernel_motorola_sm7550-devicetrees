@@ -127,12 +127,12 @@
 
 	adsp_mem: adsp_region@9c200000 {
 		no-map;
-		reg = <0x0 0x9c200000 0x0 0x2300000>;
+		reg = <0x0 0x9c200000 0x0 0x2400000>;
 	};
 
-	camera_mem: camera_region@9e500000 {
+	camera_mem: camera_region@9e600000 {
 		no-map;
-		reg = <0x0 0x9e500000 0x0 0x800000>;
+		reg = <0x0 0x9e600000 0x0 0x800000>;
 	};
 
 	video_mem: video_region@9f000000 {

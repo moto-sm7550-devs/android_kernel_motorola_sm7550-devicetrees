@@ -44,6 +44,34 @@ waipio-overlays-dtb-$(CONFIG_ARCH_WAIPIO) += $(WAIPIO_BOARDS) $(NOAPQ_WAIPIO_BOA
 dtb-y += $(waipio-dtb-y)
 
 
+#remove useless qcom device tree in moto build
+ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
+
+ifeq ($(CONFIG_RTWO_DTB),y)
+KALAMA_BASE_DTB += kalama-rtwo-base.dtb kalama-v2-rtwo-base.dtb
+KALAMA_BOARDS += kalama-rtwo-evb1-overlay.dtbo \
+                 kalama-rtwo-evt1-overlay.dtbo \
+                 kalama-rtwo-prc-dvt1b-overlay.dtbo \
+                 kalama-rtwo-row-dvt1b-overlay.dtbo \
+                 kalama-rtwo-prc-pvt-overlay.dtbo \
+                 kalama-rtwo-na-vzw-evt2-overlay.dtbo
+endif
+
+ifeq ($(CONFIG_CTWO_DTB),y)
+KALAMA_BASE_DTB += kalama-ctwo-base.dtb kalama-v2-ctwo-base.dtb
+KALAMA_BOARDS += kalama-ctwo-evb1-overlay.dtbo
+endif
+
+ifeq ($(CONFIG_OBERON_DTB),y)
+KALAMA_BOARDS += kalama-oberon-evb-overlay.dtbo
+endif
+
+ifeq ($(CONFIG_ARC_DTB),y)
+KALAMA_BASE_DTB += kalama-arc-base.dtb kalama-v2-arc-base.dtb
+KALAMA_BOARDS += kalama-arc-evb-overlay.dtbo
+endif
+
+else
 KALAMA_BASE_DTB += kalama.dtb kalama-v2.dtb kalama-sg.dtb kalama-qcm.dtb
 KALAMA_APQ_BASE_DTB += kalamap.dtb kalamap-v2.dtb kalamap-sg.dtb kalamap-qcs.dtb
 
@@ -68,6 +96,7 @@ NOAPQ_KALAMA_BOARDS += \
 		 kalama-pinn-mtp-overlay.dtbo \
 		 kalama-baagha-cdp-overlay.dtbo \
 		 kalama-baagha-mtp-overlay.dtbo
+endif
 
 kalama-dtb-$(CONFIG_ARCH_KALAMA) += \
 	$(call add-overlays, $(KALAMA_BOARDS) $(NOAPQ_KALAMA_BOARDS),$(KALAMA_BASE_DTB))\
@@ -77,8 +106,22 @@ kalama_le-overlays-dtb-$(CONFIG_ARCH_KALAMA) += $(KALAMA_BOARDS) $(NOAPQ_KALAMA_
 kalama_lu-overlays-dtb-$(CONFIG_ARCH_KALAMA) += $(KALAMA_BOARDS) $(NOAPQ_KALAMA_BOARDS) $(KALAMA_BASE_DTB) $(KALAMA_APQ_BASE_DTB)
 dtb-y += $(kalama-dtb-y)
 
-CROW_BASE_DTB += crow.dtb
+#remove useless qcom device tree in moto build
+ifeq ($(CONFIG_MMI_DEVICE_DTBS),y)
 
+ifeq ($(CONFIG_EQE_DTB),y)
+CROW_BASE_DTB += crow-eqe-base.dtb
+CROW_BOARDS += crow-eqe-evb1-overlay.dtbo \
+               crow-eqe-evt1-overlay.dtbo \
+               crow-eqe-dvt1-overlay.dtbo \
+               crow-eqe-evb1-jp-overlay.dtbo \
+               crow-eqe-evt1-jp-overlay.dtbo \
+               crow-eqe-dvt1-jp-overlay.dtbo
+endif
+
+else
+
+CROW_BASE_DTB += crow.dtb
 CROW_BOARDS += \
 		crow-rumi-overlay.dtbo \
 		crow-atp-overlay.dtbo \
@@ -89,6 +132,7 @@ CROW_BOARDS += \
 		crow-idp-rcm-overlay.dtbo \
 		crow-qrd-overlay.dtbo
 
+endif
 kalama-dtb-$(CONFIG_ARCH_CROW) += \
 	$(call add-overlays, $(CROW_BOARDS) ,$(CROW_BASE_DTB))
 kalama-overlays-dtb-$(CONFIG_ARCH_CROW) += $(CROW_BOARDS) $(CROW_BASE_DTB)
