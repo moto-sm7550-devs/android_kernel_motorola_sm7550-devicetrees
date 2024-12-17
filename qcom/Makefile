@@ -570,4 +570,5 @@ dtb-y += $(sdxbaagha-dtb-y)
 
 always-y        := $(dtb-y)
 subdir-y        := $(dts-dirs)
+subdir-y        += audio bt camera data display eSE eva graphics mm mmrm nfc video wlan
 clean-files     := *.dtb *.dtbo
